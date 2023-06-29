@@ -46,15 +46,15 @@
         <script src="data/Autresassociationshabilites_14.js"></script>
         <script src="data/JardinsdeCocagne_15.js"></script>
         <script src="data/Associationspartenaires_16.js"></script>
-        <script src="data/BA17_17.js"></script>
-        <script src="data/CCASpartenaires_18.js"></script>
-        <script src="data/Epiceriessocialespartenaires_19.js"></script>
+        <script src="data/CCASpartenaires_17.js"></script>
+        <script src="data/Epiceriessocialespartenaires_18.js"></script>
+        <script src="data/BA17_19.js"></script>
         <script src="data/RgionNouvelleAquitaine_20.js"></script>
         <script src="data/CharenteMaritime_21.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[45.11303790207062,-2.043160240088452],[46.38447657947861,1.0953942891615753]]);
+        }).fitBounds([[45.11303790207062,-2.211377731044658],[46.38447657947868,1.2636117801177797]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -1097,66 +1097,7 @@
         });
         bounds_group.addLayer(layer_Associationspartenaires_16);
         map.addLayer(layer_Associationspartenaires_16);
-        function pop_BA17_17(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['BA'] !== null ? autolinker.link(feature.properties['BA'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ANTENNES'] !== null ? autolinker.link(feature.properties['ANTENNES'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Nom Associ'] !== null ? autolinker.link(feature.properties['Nom Associ'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Code posta'] !== null ? autolinker.link(feature.properties['Code posta'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Ville'] !== null ? autolinker.link(feature.properties['Ville'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Téléphon'] !== null ? autolinker.link(feature.properties['Téléphon'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_BA17_17_0() {
-            return {
-                pane: 'pane_BA17_17',
-        rotationAngle: 0.0,
-        rotationOrigin: 'center center',
-        icon: L.icon({
-            iconUrl: 'markers/Banque alimenatire sf.svg',
-            iconSize: [22.799999999999997, 22.799999999999997]
-        }),
-                interactive: true,
-            }
-        }
-        map.createPane('pane_BA17_17');
-        map.getPane('pane_BA17_17').style.zIndex = 417;
-        map.getPane('pane_BA17_17').style['mix-blend-mode'] = 'normal';
-        var layer_BA17_17 = new L.geoJson(json_BA17_17, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_BA17_17',
-            layerName: 'layer_BA17_17',
-            pane: 'pane_BA17_17',
-            onEachFeature: pop_BA17_17,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.marker(latlng, style_BA17_17_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_BA17_17);
-        map.addLayer(layer_BA17_17);
-        function pop_CCASpartenaires_18(feature, layer) {
+        function pop_CCASpartenaires_17(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">BA</th>\
@@ -1190,9 +1131,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_CCASpartenaires_18_0() {
+        function style_CCASpartenaires_17_0() {
             return {
-                pane: 'pane_CCASpartenaires_18',
+                pane: 'pane_CCASpartenaires_17',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(252,124,4,1.0)',
@@ -1206,27 +1147,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_CCASpartenaires_18');
-        map.getPane('pane_CCASpartenaires_18').style.zIndex = 418;
-        map.getPane('pane_CCASpartenaires_18').style['mix-blend-mode'] = 'normal';
-        var layer_CCASpartenaires_18 = new L.geoJson(json_CCASpartenaires_18, {
+        map.createPane('pane_CCASpartenaires_17');
+        map.getPane('pane_CCASpartenaires_17').style.zIndex = 417;
+        map.getPane('pane_CCASpartenaires_17').style['mix-blend-mode'] = 'normal';
+        var layer_CCASpartenaires_17 = new L.geoJson(json_CCASpartenaires_17, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CCASpartenaires_18',
-            layerName: 'layer_CCASpartenaires_18',
-            pane: 'pane_CCASpartenaires_18',
-            onEachFeature: pop_CCASpartenaires_18,
+            dataVar: 'json_CCASpartenaires_17',
+            layerName: 'layer_CCASpartenaires_17',
+            pane: 'pane_CCASpartenaires_17',
+            onEachFeature: pop_CCASpartenaires_17,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_CCASpartenaires_18_0(feature));
+                return L.circleMarker(latlng, style_CCASpartenaires_17_0(feature));
             },
         });
-        bounds_group.addLayer(layer_CCASpartenaires_18);
-        map.addLayer(layer_CCASpartenaires_18);
-        function pop_Epiceriessocialespartenaires_19(feature, layer) {
+        bounds_group.addLayer(layer_CCASpartenaires_17);
+        map.addLayer(layer_CCASpartenaires_17);
+        function pop_Epiceriessocialespartenaires_18(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">BA</th>\
@@ -1260,9 +1201,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Epiceriessocialespartenaires_19_0() {
+        function style_Epiceriessocialespartenaires_18_0() {
             return {
-                pane: 'pane_Epiceriessocialespartenaires_19',
+                pane: 'pane_Epiceriessocialespartenaires_18',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(227,26,28,1.0)',
@@ -1276,26 +1217,88 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Epiceriessocialespartenaires_19');
-        map.getPane('pane_Epiceriessocialespartenaires_19').style.zIndex = 419;
-        map.getPane('pane_Epiceriessocialespartenaires_19').style['mix-blend-mode'] = 'normal';
-        var layer_Epiceriessocialespartenaires_19 = new L.geoJson(json_Epiceriessocialespartenaires_19, {
+        map.createPane('pane_Epiceriessocialespartenaires_18');
+        map.getPane('pane_Epiceriessocialespartenaires_18').style.zIndex = 418;
+        map.getPane('pane_Epiceriessocialespartenaires_18').style['mix-blend-mode'] = 'normal';
+        var layer_Epiceriessocialespartenaires_18 = new L.geoJson(json_Epiceriessocialespartenaires_18, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Epiceriessocialespartenaires_19',
-            layerName: 'layer_Epiceriessocialespartenaires_19',
-            pane: 'pane_Epiceriessocialespartenaires_19',
-            onEachFeature: pop_Epiceriessocialespartenaires_19,
+            dataVar: 'json_Epiceriessocialespartenaires_18',
+            layerName: 'layer_Epiceriessocialespartenaires_18',
+            pane: 'pane_Epiceriessocialespartenaires_18',
+            onEachFeature: pop_Epiceriessocialespartenaires_18,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Epiceriessocialespartenaires_19_0(feature));
+                return L.circleMarker(latlng, style_Epiceriessocialespartenaires_18_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Epiceriessocialespartenaires_19);
-        map.addLayer(layer_Epiceriessocialespartenaires_19);
+        bounds_group.addLayer(layer_Epiceriessocialespartenaires_18);
+        map.addLayer(layer_Epiceriessocialespartenaires_18);
+        function pop_BA17_19(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">BA</th>\
+                        <td>' + (feature.properties['BA'] !== null ? autolinker.link(feature.properties['BA'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Association</th>\
+                        <td>' + (feature.properties['Nom Associ'] !== null ? autolinker.link(feature.properties['Nom Associ'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Adresse</th>\
+                        <td>' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CP</th>\
+                        <td>' + (feature.properties['Code posta'] !== null ? autolinker.link(feature.properties['Code posta'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Ville</th>\
+                        <td>' + (feature.properties['Ville'] !== null ? autolinker.link(feature.properties['Ville'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Tel</th>\
+                        <td>' + (feature.properties['Téléphon'] !== null ? autolinker.link(feature.properties['Téléphon'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_BA17_19_0() {
+            return {
+                pane: 'pane_BA17_19',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Banque alimenatire sf.svg',
+            iconSize: [22.799999999999997, 22.799999999999997]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_BA17_19');
+        map.getPane('pane_BA17_19').style.zIndex = 419;
+        map.getPane('pane_BA17_19').style['mix-blend-mode'] = 'normal';
+        var layer_BA17_19 = new L.geoJson(json_BA17_19, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_BA17_19',
+            layerName: 'layer_BA17_19',
+            pane: 'pane_BA17_19',
+            onEachFeature: pop_BA17_19,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_BA17_19_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_BA17_19);
+        map.addLayer(layer_BA17_19);
         function pop_RgionNouvelleAquitaine_20(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -1384,7 +1387,7 @@
         bounds_group.addLayer(layer_CharenteMaritime_21);
         map.addLayer(layer_CharenteMaritime_21);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/CharenteMaritime_21.png" /> Charente-Maritime': layer_CharenteMaritime_21,'<img src="legend/RgionNouvelleAquitaine_20.png" /> Région Nouvelle Aquitaine': layer_RgionNouvelleAquitaine_20,'<img src="legend/Epiceriessocialespartenaires_19.png" /> Epiceries sociales partenaires': layer_Epiceriessocialespartenaires_19,'<img src="legend/CCASpartenaires_18.png" /> CCAS partenaires': layer_CCASpartenaires_18,'<img src="legend/BA17_17.png" /> BA 17': layer_BA17_17,'<img src="legend/Associationspartenaires_16.png" /> Associations partenaires': layer_Associationspartenaires_16,'<img src="legend/JardinsdeCocagne_15.png" /> Jardins de Cocagne': layer_JardinsdeCocagne_15,'<img src="legend/Autresassociationshabilites_14.png" /> Autres associations habilitées': layer_Autresassociationshabilites_14,'<img src="legend/ANDESnonpartenaires_13.png" /> ANDES (non partenaires)': layer_ANDESnonpartenaires_13,'<img src="legend/SecoursPopulaire_12.png" /> Secours Populaire': layer_SecoursPopulaire_12,'<img src="legend/RestoduCoeur_11.png" /> RestoduCoeur': layer_RestoduCoeur_11,'<img src="legend/RestoduCoeuritinrant_10.png" /> RestoduCoeur itinérant': layer_RestoduCoeuritinrant_10,'<img src="legend/SecoursCatholique_9.png" /> Secours Catholique': layer_SecoursCatholique_9,'<img src="legend/Zonesblanchesdelaidealimentaire_8.png" /> Zones blanches de l\'aide alimentaire': layer_Zonesblanchesdelaidealimentaire_8,'<img src="legend/Communesavecaidealimentaire_7.png" /> Communes avec aide alimentaire': layer_Communesavecaidealimentaire_7,'PAT - Charente Maritime<br /><table><tr><td style="text-align: center;"><img src="legend/PATCharenteMaritime_6_CommunautédAgglomérationdeRoyanAtlantique0.png" /></td><td>Communauté d’Agglomération de Royan Atlantique</td></tr><tr><td style="text-align: center;"><img src="legend/PATCharenteMaritime_6_CommunautédecommunesdeHauteSaintonge1.png" /></td><td>Communauté de communes de Haute-Saintonge</td></tr><tr><td style="text-align: center;"><img src="legend/PATCharenteMaritime_6_CommunautédeCommunesdelîledOléron2.png" /></td><td>Communauté de Communes de l\'île d\'Oléron</td></tr></table>': layer_PATCharenteMaritime_6,'ZRR<br /><table><tr><td style="text-align: center;"><img src="legend/ZRR_5_PPartiellementclasséeenZRR0.png" /></td><td>P - Partiellement classée en ZRR</td></tr><tr><td style="text-align: center;"><img src="legend/ZRR_5_CClasséeenZRR1.png" /></td><td>C - Classée en ZRR</td></tr></table>': layer_ZRR_5,'Taux de chômage - Charente Maritime<br /><table><tr><td style="text-align: center;"><img src="legend/TauxdechmageCharenteMaritime_4_0960.png" /></td><td>0 - 9,6</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdechmageCharenteMaritime_4_961341.png" /></td><td>9,6 - 13,4</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdechmageCharenteMaritime_4_1341822.png" /></td><td>13,4 - 18,2</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdechmageCharenteMaritime_4_1823553.png" /></td><td>18,2 - 35,5</td></tr></table>': layer_TauxdechmageCharenteMaritime_4,'Taux de pauvreté EPCI -Charente Maritime<br /><table><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCICharenteMaritime_3_82820.png" /></td><td>8,2 - 8,2</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCICharenteMaritime_3_821051.png" /></td><td>8,2 - 10,5</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCICharenteMaritime_3_1051232.png" /></td><td>10,5 - 12,3</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCICharenteMaritime_3_1231363.png" /></td><td>12,3 - 13,6</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCICharenteMaritime_3_1361594.png" /></td><td>13,6 - 15,9</td></tr></table>': layer_TauxdepauvretEPCICharenteMaritime_3,'<img src="legend/CommunesCharenteMaritime_2.png" /> Communes Charente-Maritime': layer_CommunesCharenteMaritime_2,'<img src="legend/EPCICharenteMaritime_1.png" /> EPCI Charente Maritime': layer_EPCICharenteMaritime_1,"Google Road": layer_GoogleRoad_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/CharenteMaritime_21.png" /> Charente-Maritime': layer_CharenteMaritime_21,'<img src="legend/RgionNouvelleAquitaine_20.png" /> Région Nouvelle Aquitaine': layer_RgionNouvelleAquitaine_20,'<img src="legend/BA17_19.png" /> BA 17': layer_BA17_19,'<img src="legend/Epiceriessocialespartenaires_18.png" /> Epiceries sociales partenaires': layer_Epiceriessocialespartenaires_18,'<img src="legend/CCASpartenaires_17.png" /> CCAS partenaires': layer_CCASpartenaires_17,'<img src="legend/Associationspartenaires_16.png" /> Associations partenaires': layer_Associationspartenaires_16,'<img src="legend/JardinsdeCocagne_15.png" /> Jardins de Cocagne': layer_JardinsdeCocagne_15,'<img src="legend/Autresassociationshabilites_14.png" /> Autres associations habilitées': layer_Autresassociationshabilites_14,'<img src="legend/ANDESnonpartenaires_13.png" /> ANDES (non partenaires)': layer_ANDESnonpartenaires_13,'<img src="legend/SecoursPopulaire_12.png" /> Secours Populaire': layer_SecoursPopulaire_12,'<img src="legend/RestoduCoeur_11.png" /> RestoduCoeur': layer_RestoduCoeur_11,'<img src="legend/RestoduCoeuritinrant_10.png" /> RestoduCoeur itinérant': layer_RestoduCoeuritinrant_10,'<img src="legend/SecoursCatholique_9.png" /> Secours Catholique': layer_SecoursCatholique_9,'<img src="legend/Zonesblanchesdelaidealimentaire_8.png" /> Zones blanches de l\'aide alimentaire': layer_Zonesblanchesdelaidealimentaire_8,'<img src="legend/Communesavecaidealimentaire_7.png" /> Communes avec aide alimentaire': layer_Communesavecaidealimentaire_7,'PAT - Charente Maritime<br /><table><tr><td style="text-align: center;"><img src="legend/PATCharenteMaritime_6_CommunautédAgglomérationdeRoyanAtlantique0.png" /></td><td>Communauté d’Agglomération de Royan Atlantique</td></tr><tr><td style="text-align: center;"><img src="legend/PATCharenteMaritime_6_CommunautédecommunesdeHauteSaintonge1.png" /></td><td>Communauté de communes de Haute-Saintonge</td></tr><tr><td style="text-align: center;"><img src="legend/PATCharenteMaritime_6_CommunautédeCommunesdelîledOléron2.png" /></td><td>Communauté de Communes de l\'île d\'Oléron</td></tr></table>': layer_PATCharenteMaritime_6,'ZRR<br /><table><tr><td style="text-align: center;"><img src="legend/ZRR_5_PPartiellementclasséeenZRR0.png" /></td><td>P - Partiellement classée en ZRR</td></tr><tr><td style="text-align: center;"><img src="legend/ZRR_5_CClasséeenZRR1.png" /></td><td>C - Classée en ZRR</td></tr></table>': layer_ZRR_5,'Taux de chômage - Charente Maritime<br /><table><tr><td style="text-align: center;"><img src="legend/TauxdechmageCharenteMaritime_4_0960.png" /></td><td>0 - 9,6</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdechmageCharenteMaritime_4_961341.png" /></td><td>9,6 - 13,4</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdechmageCharenteMaritime_4_1341822.png" /></td><td>13,4 - 18,2</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdechmageCharenteMaritime_4_1823553.png" /></td><td>18,2 - 35,5</td></tr></table>': layer_TauxdechmageCharenteMaritime_4,'Taux de pauvreté EPCI -Charente Maritime<br /><table><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCICharenteMaritime_3_82820.png" /></td><td>8,2 - 8,2</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCICharenteMaritime_3_821051.png" /></td><td>8,2 - 10,5</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCICharenteMaritime_3_1051232.png" /></td><td>10,5 - 12,3</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCICharenteMaritime_3_1231363.png" /></td><td>12,3 - 13,6</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCICharenteMaritime_3_1361594.png" /></td><td>13,6 - 15,9</td></tr></table>': layer_TauxdepauvretEPCICharenteMaritime_3,'<img src="legend/CommunesCharenteMaritime_2.png" /> Communes Charente-Maritime': layer_CommunesCharenteMaritime_2,'<img src="legend/EPCICharenteMaritime_1.png" /> EPCI Charente Maritime': layer_EPCICharenteMaritime_1,"Google Road": layer_GoogleRoad_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
