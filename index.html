@@ -57,7 +57,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[45.10295487687541,-2.1352471988875856],[46.374620634233736,0.9671106085095184]]);
+        }).fitBounds([[45.10295487687541,-1.9016359182100933],[46.374620634233736,1.200721889187011]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -607,7 +607,6 @@
             },
         });
         bounds_group.addLayer(layer_Commercesalimentaireshorsramasse_9);
-        map.addLayer(layer_Commercesalimentaireshorsramasse_9);
         function pop_Ramassedirecteettripartite_10(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -685,7 +684,6 @@
             },
         });
         bounds_group.addLayer(layer_Ramassedirecteettripartite_10);
-        map.addLayer(layer_Ramassedirecteettripartite_10);
         function pop_SecoursCatholique_11(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
