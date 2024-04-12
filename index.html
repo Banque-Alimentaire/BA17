@@ -63,7 +63,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[45.18197749238016,-1.7529716799005883],[46.180753956394014,0.8317901910266436]]);
+        }).fitBounds([[45.114758337808745,-1.9252891379624089],[46.246705195862305,1.0041076490884642]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -109,9 +109,6 @@
             var popupContent = '<table>\
                     <tr>\
                         <td class="visible-with-data" id="libgeo"colspan="2"><strong>Commune</strong><br />' + (feature.properties['libgeo'] !== null ? autolinker.link(feature.properties['libgeo'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td class="visible-with-data" id="Compétence territoriale asso BA17_libgeo"colspan="2"><strong>Compétence territoriale asso BA17_libgeo</strong><br />' + (feature.properties['Compétence territoriale asso BA17_libgeo'] !== null ? autolinker.link(feature.properties['Compétence territoriale asso BA17_libgeo'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -1137,12 +1134,6 @@
         map.addLayer(layer_JardinsdeCocagne_16);
         function pop_Associationspartenaires_17(feature, layer) {
             var popupContent = '<table>\
-                    <tr>\
-                        <td class="visible-with-data" id="BA"colspan="2"><strong>BA</strong><br />' + (feature.properties['BA'] !== null ? autolinker.link(feature.properties['BA'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td class="visible-with-data" id="ANTENNES"colspan="2"><strong>ANTENNES</strong><br />' + (feature.properties['ANTENNES'] !== null ? autolinker.link(feature.properties['ANTENNES'].toLocaleString()) : '') + '</td>\
-                    </tr>\
                     <tr>\
                         <td class="visible-with-data" id="Nom Associ"colspan="2"><strong>Association</strong><br />' + (feature.properties['Nom Associ'] !== null ? autolinker.link(feature.properties['Nom Associ'].toLocaleString()) : '') + '</td>\
                     </tr>\
