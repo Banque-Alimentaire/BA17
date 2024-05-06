@@ -63,7 +63,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[45.114758337808745,-1.9252891379624089],[46.246705195862305,1.0041076490884642]]);
+        }).fitBounds([[45.140771158995456,-1.5828527549244202],[46.272196883842064,0.47782636424246344]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -642,7 +642,7 @@
                         <td class="visible-with-data" id="Activité"colspan="2"><strong>Activité</strong><br />' + (feature.properties['Activité'] !== null ? autolinker.link(feature.properties['Activité'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Partenaria"colspan="2"><strong>Partenariat BA</strong><br />' + (feature.properties['Partenaria'] !== null ? autolinker.link(feature.properties['Partenaria'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Partenaria"colspan="2"><strong>Partenaria</strong><br />' + (feature.properties['Partenaria'] !== null ? autolinker.link(feature.properties['Partenaria'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td class="visible-with-data" id="Type de su"colspan="2"><strong>Surface</strong><br />' + (feature.properties['Type de su'] !== null ? autolinker.link(feature.properties['Type de su'].toLocaleString()) : '') + '</td>\
